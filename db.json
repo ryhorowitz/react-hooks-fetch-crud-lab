@@ -76,39 +76,6 @@
       ],
       "correctIndex": "3",
       "id": 7
-    },
-    {
-      "prompt": "why",
-      "answers": [
-        "1",
-        "2",
-        "3",
-        "because"
-      ],
-      "correctIndex": "3",
-      "id": 8
-    },
-    {
-      "prompt": "why",
-      "answers": [
-        "1",
-        "2",
-        "3",
-        "a dur"
-      ],
-      "correctIndex": "3",
-      "id": 9
-    },
-    {
-      "prompt": "why",
-      "answers": [
-        "why not",
-        "2",
-        "3",
-        "4"
-      ],
-      "correctIndex": 0,
-      "id": 10
     }
   ]
 }
