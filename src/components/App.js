@@ -21,12 +21,28 @@ function App() {
     const updatedQuestions = questions.filter( q => q.id !== id)
     setQuestions(updatedQuestions)
   }
+
+  function handleNewAnswerPatch(id, answerIndex) {
+    console.log('index', answerIndex)
+    answerIndex = Number(answerIndex)
+    const updatedQuestions = questions.map( q => {
+      if (q.id === id) {
+        q.correctIndex = answerIndex
+      }
+
+      return q
+    })
+    setQuestions(updatedQuestions)
+  }
+
   return (
     <main>
       <AdminNavBar onChangePage={setPage} />
       {page === "Form" ? 
       <QuestionForm onAddNewQuestion={handleNewQuestionAdded}/> : 
-      <QuestionList list={questions} onDeleteQuestion={handleDeleteQuestion}/>}
+      <QuestionList list={questions} 
+      onDeleteQuestion={handleDeleteQuestion}
+      onPatchAnswer={handleNewAnswerPatch}/>}
     </main>
   );
 }
